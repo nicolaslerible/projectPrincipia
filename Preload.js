@@ -5,6 +5,7 @@ class Preload extends Phaser.Scene {
 
   ///////////  PRELOAD  ///////////
   preload() {
+    
     //Background
     this.load.image("Back01", "assets/images/Back01.png");
     this.load.image("Back02", "assets/images/Back02.png");
