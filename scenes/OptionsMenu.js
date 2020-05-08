@@ -5,7 +5,7 @@ class OptionsMenu extends Phaser.Scene {
 
     create() {
 
-        //// BUTTONS ////
+        //// BUTTONS more ////
         this.ShipOptions = new Button({ scene: this, x: 128, y: 128, on: "ShipOptions-on", off: "Ship-off", flip: false });
         this.ShipOptions.animateButton();
         this.BtnEsc = new Button({ scene: this, x: 50, y: 224, on: "Esc-on", off: "Esc-off", flip: false });
