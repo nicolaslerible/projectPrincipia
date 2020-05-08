@@ -17,13 +17,13 @@ class ChooseLevel extends Phaser.Scene {
         ////  PLANETS  ////
         this.planets = this.add.group();
         this.mercury = new Planet({ scene: this, x: 128, y: 107, anim: "Mercury_anim", pos: 1, small: false });
-        this.venus = new Planet({ scene: this, x: 245, y: 107, anim: "Venus_anim", pos: 2, small: true });
-        this.earth = new Planet({ scene: this, x: 270, y: 107, anim: "Earth_anim", pos: 3, small: true });
-        this.mars = new Planet({ scene: this, x: 295, y: 107, anim: "Mars_anim", pos: 4, small: true });
-        this.jupiter = new Planet({ scene: this, x: 320, y: 107, anim: "Jupiter_anim", pos: 5, small: true });
-        this.saturn = new Planet({ scene: this, x: 345, y: 107, anim: "Saturn_anim", pos: 6, small: true });
-        this.uranus = new Planet({ scene: this, x: 370, y: 107, anim: "Uranus_anim", pos: 7, small: true });
-        this.neptune = new Planet({ scene: this, x: 395, y: 107, anim: "Neptune_anim", pos: 8, small: true });
+        this.venus = new Planet({ scene: this, x: 238, y: 107, anim: "Venus_anim", pos: 2, small: true });
+        this.earth = new Planet({ scene: this, x: 348, y: 107, anim: "Earth_anim", pos: 3, small: true });
+        this.mars = new Planet({ scene: this, x: 458, y: 107, anim: "Mars_anim", pos: 4, small: true });
+        this.jupiter = new Planet({ scene: this, x: 568, y: 107, anim: "Jupiter_anim", pos: 5, small: true });
+        this.saturn = new Planet({ scene: this, x: 678, y: 107, anim: "Saturn_anim", pos: 6, small: true });
+        this.uranus = new Planet({ scene: this, x: 788, y: 107, anim: "Uranus_anim", pos: 7, small: true });
+        this.neptune = new Planet({ scene: this, x: 898, y: 107, anim: "Neptune_anim", pos: 8, small: true });
 
         //// BUTTONS ////
         this.Back = new Button({ scene: this, x: 128, y: 128, on: "Ship-on", off: "Ship-off", flip: false });
