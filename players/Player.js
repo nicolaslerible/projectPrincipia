@@ -23,7 +23,7 @@ class Player extends Phaser.Physics.Arcade.Sprite {
     //Movement
     this.scene.cursorKeys = this.scene.input.keyboard.createCursorKeys();
     //Shoot button
-    this.scene.spacebar = this.scene.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE);
+    this.scene.keyZ = this.scene.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.Z);
     //Recoger PowerUp
     //this.scene.physics.add.overlap(this.scene.players, this.scene.powerups, this.scene.pickPowerUp, null, this.scene);
 
@@ -128,7 +128,7 @@ class Player extends Phaser.Physics.Arcade.Sprite {
       }
     }
 
-    if (Phaser.Input.Keyboard.JustDown(this.scene.spacebar) && this.alpha > 0.4) { //Shoot
+    if (Phaser.Input.Keyboard.JustDown(this.scene.keyZ) && this.alpha > 0.4) { //Shoot
       this.shoot();
     }
 

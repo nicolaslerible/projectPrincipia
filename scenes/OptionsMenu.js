@@ -14,12 +14,12 @@ class OptionsMenu extends Phaser.Scene {
 
         //// CONTROLS ////
         this.cursorKeys = this.input.keyboard.createCursorKeys();
-        this.spacebar = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE);
+        this.keyZ = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.Z);
 
     }
 
     update() {
-        if (Phaser.Input.Keyboard.JustDown(this.spacebar)) {
+        if (Phaser.Input.Keyboard.JustDown(this.keyZ)) {
             this.scene.start("chooseLevel");
         }
 

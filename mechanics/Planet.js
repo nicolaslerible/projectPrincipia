@@ -29,9 +29,8 @@ class Planet extends Phaser.GameObjects.Sprite {
   }
 
   update() {
-
-    console.log(this.animation + ": " + this.body.x);
-
+    
+    //console.log(this.animation + ": " + this.body.x);
   }
 
   startSmall() {
