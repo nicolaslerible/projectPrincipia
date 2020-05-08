@@ -30,7 +30,7 @@ class Planet extends Phaser.GameObjects.Sprite {
 
   update(){
 
-    //console.log(this.animation + ": " + this.body.x);
+    console.log(this.animation + ": " + this.body.x);
 
     if(this.body.x <= -146 && this.body.x > -147){
       this.body.velocity.x = 0;
