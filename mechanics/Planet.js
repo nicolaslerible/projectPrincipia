@@ -9,6 +9,7 @@ class Planet extends Phaser.GameObjects.Sprite {
     this.animation = config.anim;
     this.isSmall = config.small;
     this.position = config.pos;
+    this.isMoving = false;
 
     //Animación        
     this.play(this.animation);
@@ -30,7 +31,8 @@ class Planet extends Phaser.GameObjects.Sprite {
 
   update() {
     
-    //console.log(this.animation + ": " + this.body.x);
+    console.log(this.isMoving);
+    console.log(this.animation + ": " + this.body.x);
   }
 
   startSmall() {
@@ -39,6 +41,8 @@ class Planet extends Phaser.GameObjects.Sprite {
   }
 
   managePlanet(dir) {
+    this.isMoving = true;
+
     if (this.body.x <= 113 && this.body.x == 112) {
       this.changeSize(-1);
     } else if (((this.body.x >= 230 && this.body.x <= 231) && dir < 0) || ((this.body.x <= 11 && this.body.x >= 10) && dir > 0)) {
@@ -54,6 +58,7 @@ class Planet extends Phaser.GameObjects.Sprite {
         loop: false
       });
     }
+    this.isMoving = false;
   }
 
   changeSize(dir) {

@@ -22,21 +22,8 @@ class Enemy extends Phaser.GameObjects.Sprite {
     }
 
     update(){
-      switch(this.movement){
-        case "U-move":
-          if(this.x < (this.totalX/3) ){
-            this.body.velocity.y = 100;
-            this.body.velocity.x = 100;
-          }else if (this.x > ((2*this.totalX)/3)){
-            this.body.velocity.y = -100;
-            this.body.velocity.x = 100;
-          }else{
-            this.body.velocity.y = 0;
-            this.body.velocity.x = 130;
-          }
-          
-        break;
-      }
+      
+      this.moveShip();
 
     }
   

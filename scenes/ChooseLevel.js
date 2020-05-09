@@ -52,7 +52,6 @@ class ChooseLevel extends Phaser.Scene {
     }
 
     update() {
-        console.log(this.isUp);
 
         if (Phaser.Input.Keyboard.JustDown(this.keyZ)) {
             if (this.isUp) {
@@ -113,12 +112,12 @@ class ChooseLevel extends Phaser.Scene {
 
 
         //Move Planets
-        if (!this.isUp && Phaser.Input.Keyboard.JustDown(this.cursorKeys.left) && !(this.mercury.body.x <= 113 && this.mercury.body.x >= 112)) {         //Left
+        if (!this.isUp && Phaser.Input.Keyboard.JustDown(this.cursorKeys.left) && this.mercury.body.x < 11) {         //Left
             if (!this.anyMovement()) {
                 this.BtnLeft.animateButton();
                 this.movePlanets(1)
             }
-        } else if (!this.isUp && Phaser.Input.Keyboard.JustDown(this.cursorKeys.right) && !(this.neptune.body.x <= 113 && this.neptune.body.x >= 112)) { //Right
+        } else if (!this.isUp && Phaser.Input.Keyboard.JustDown(this.cursorKeys.right) && this.neptune.body.x >= 230 ) { //Right
             if (!this.anyMovement()) {
                 this.BtnRight.animateButton();
                 this.movePlanets(-1)
