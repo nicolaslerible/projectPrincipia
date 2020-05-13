@@ -66,7 +66,6 @@ class Player extends Phaser.Physics.Arcade.Sprite {
   //Transparencia e inmunidad
   hitted(scene, enemy) {
     if (this.alpha == 1) {
-      enemy.resetShipPos();
       if (this.alpha < 1) {
         return;
       }
